@@ -3,3 +3,10 @@ A basic method of image processing called edge detection is used to locate bound
 
 **Algorithms**
 The algorithm accepts an image, converts it to grayscale, blurs it with a Gaussian filter, and then detects the edges. It finds the 'edge' magnitude of each pixel with a Sobel operator, then disregards all 'weak' edge pixels unless they are connected to a 'strong' edge pixel. Main steps involve: Grayscale Conversion, Noise Reduction (Gaussian Filter), Gradient Calculation and Convolution, Non-Maximum Suppression, Double threshold and Hysteresis.
+
+**Running Algorithm**
+
+Create Virtual envrioment: python3 -m venv ("enviroment name")
+Install Requirements: pip install -r requirements.txt
+Run main.py file 
+
