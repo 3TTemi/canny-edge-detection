@@ -6,7 +6,7 @@ The algorithm accepts an image, converts it to grayscale, blurs it with a Gaussi
 
 **Running Algorithm**
 
-Create Virtual envrioment: python3 -m venv ("enviroment name")
-Install Requirements: pip install -r requirements.txt
-Run main.py file 
+- Create Virtual envrioment: python3 -m venv ("enviroment name")
+- Install Requirements: pip install -r requirements.txt
+- Run main.py file 
 
