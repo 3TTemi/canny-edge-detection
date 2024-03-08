@@ -4,7 +4,6 @@ from scipy import signal
 import pandas as pd
 import numpy as np
 
-
 def convert_grayscale(img):
     r_val = 0.299
     g_val = 0.587
@@ -123,10 +122,7 @@ fig, axs = plt.subplots(1,2)
 
 sample_img = img.imread('pics/emma.jpeg')
 
-# Select everything then only select the first three of RGB 
-# grey_img = np.dot(sample_img[...,:3], [0.299, 0.587, 0.144])
 grey_img = convert_grayscale(sample_img)
-# Grey colormap as necessary from imshow  
 
 blurred_img =  signal.convolve2d(grey_img, gaussian_filter(15,5))
 
@@ -138,8 +134,8 @@ threshold_img = double_threshold(suppressed_img, 0.05, 0.14)
 
 final_img = hysteresis(np.copy(threshold_img), 75, 255)
 
+# Grey colormap as necessary for imshow  
 axs[0].imshow(sample_img, cmap=plt.get_cmap('gray'))
-
 axs[1].imshow(final_img, cmap=plt.get_cmap('gray'))
 
 plt.show()
